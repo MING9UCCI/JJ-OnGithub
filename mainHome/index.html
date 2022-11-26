@@ -16,13 +16,13 @@
   <div class="wrap">
     <div class="intro_bg">
       <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
+        <input id="input-style" required maxlength="15" type="text" placeholder="What is your name?" />
+        <input id="input-button" type="submit" value="Log In" />
       </form>
       <h1 class="hidden" id="greeting"></h1>
       <h2 id="clock">00:00:00</h2>
       <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required />
+        <input id="input-style" type="text" placeholder="Write a To Do and Press Enter" required />
       </form>
       <div class="user">
         <span class="user__img"><i class="fas fa-user fa-lg"></i></span>
@@ -37,22 +37,24 @@
         <span></span>
         <span></span>
       </div>
-      <div class="icon-group">
-        <a href="https://hiclass.hannam.ac.kr/learningx/main" id="school" class="icon">
-          <i class="fa-solid fa-school"></i>
-        </a>
-        <a href="https://github.com/" id="github" class="icon">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://twitter.com/" id="twitter" class="icon">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://www.google.co.kr/" id="google" class="icon">
-          <i class="fa-brands fa-google"></i>
-        </a>
-        <a href="https://www.youtube.com/" id="youtube" class="icon">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
+      <div id="hover-icon">
+        <div class="icon-group">
+          <a href="https://hiclass.hannam.ac.kr/learningx/main" id="school" class="icon">
+            <i class="fa-solid fa-school"></i>
+          </a>
+          <a href="https://github.com/" id="github" class="icon">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/" id="twitter" class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.google.co.kr/" id="google" class="icon">
+            <i class="fa-brands fa-google"></i>
+          </a>
+          <a href="https://www.youtube.com/" id="youtube" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>

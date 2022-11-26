@@ -1,10 +1,36 @@
+/* .icon-group {
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+#hover-icon {
+  position: absolute;
+  overflow: hidden;
+  top: 25%;
+  left: 0%;
+  width: 200px;
+  height: 500px;
+}
+
 .icon-group {
   display: flex;
   position:absolute;
-  left: 49%;
-  top: 90%;
-  transform: translate(-50%, -50%);
+  flex-direction: column;
+  left: 50%;
+  top: 5%;
+  transition: 0.5s;
+  transform: translate(-50%);
 }
+
+#hover-icon:hover .icon-group {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
 
 a {
   text-decoration: none;
