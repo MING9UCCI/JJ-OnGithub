@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/website.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b8d2412b52.js" crossorigin="anonymous"></script>
   <title>Awesome_Home</title>
 </head>
@@ -21,21 +22,25 @@
       </form>
       <h1 class="hidden" id="greeting"></h1>
       <h2 id="clock">00:00:00</h2>
-      <form id="todo-form">
-        <input id="input-style" type="text" placeholder="Write a To Do and Press Enter" required />
-      </form>
       <div class="user">
         <span class="user__img"><i class="fas fa-user fa-lg"></i></span>
         <span class="user__name"> </span>
       </div>
-      <ul id="todo-list"></ul>
+      <div id="todo-div" style="text-align: center;">
+        <h2 id="todo-h2">Type Your To-Dos</h2>
+        <form id="todo-form">
+          <input id="input-style" type="text" placeholder="오늘의 할 일을 적어주세요" required />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+      
       <div id="quote">
-        <span></span>
-        <span></span>
+        <span id="sBlock"></span>
+        <span id="sBlock"></span>
       </div>
       <div id="weather">
-        <span></span>
-        <span></span>
+        <span id="wBlock"></span>
+        <span id="wBlock"></span>
       </div>
       <div id="hover-icon">
         <div class="icon-group">
@@ -59,12 +64,12 @@
     </div>
   </div>
 
-  <script src="username.js"></script>
-  <script src="clock.js"></script>
-  <script src="todo.js"></script>
-  <script src="japanese.js"></script>
-  <script src="weather.js"></script>
-  <script src="background.js"></script>
+  <script src="JS/username.js"></script>
+  <script src="JS/clock.js"></script>
+  <script src="JS/todo.js"></script>
+  <script src="JS/japanese.js"></script>
+  <script src="JS/weather.js"></script>
+  <script src="JS/background.js"></script>
 </body>
 
 </html>
