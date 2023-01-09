@@ -15,6 +15,10 @@ function deleteToDo(event) {
   saveToDos();
 }
 
+function refresh() {
+  location.reload();
+}
+
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
@@ -23,9 +27,23 @@ function paintToDo(newTodo) {
   const button = document.createElement("button");
   button.innerText = "✅";
   button.addEventListener("click", deleteToDo);
-  li.appendChild(span);
-  li.appendChild(button);
-  toDoList.appendChild(li);
+  const listCount = toDoList.childElementCount;
+
+  if (listCount >= 0 && listCount < 9) {
+    toDoInput.disabled = false;
+    toDoList.appendChild(li);
+    li.appendChild(span);
+    li.appendChild(button);
+  } else if (listCount == 9) {
+    toDoInput.disabled = true;
+    toDoInput.placeholder = "칸이 모자라요 좀 지워주세요.";
+    toDoList.appendChild(li);
+    li.appendChild(span);
+    li.appendChild(button);
+    toDoForm.appendChild(button);
+    button.innerText = "🔃";
+    button.addEventListener("click", refresh);
+  }
 }
 function handleToDoSubmit(event) {
   event.preventDefault();

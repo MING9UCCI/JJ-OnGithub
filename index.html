@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/website.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Righteous&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b8d2412b52.js" crossorigin="anonymous"></script>
@@ -18,7 +19,7 @@
     <div class="intro_bg">
       <form class="hidden" id="login-form">
         <input id="input-style" required maxlength="15" type="text" placeholder="What is your name?" />
-        <input id="input-button" type="submit" value="Log In" />
+        <input id="input-button" class="w-btn w-btn-gra2 w-btn-gra-anim" type="submit" value="Log In" />
       </form>
       <h1 class="hidden" id="greeting"></h1>
       <h2 id="clock">00:00:00</h2>
@@ -33,14 +34,41 @@
         </form>
         <ul id="todo-list"></ul>
       </div>
-      
-      <div id="quote">
-        <span id="sBlock"></span>
-        <span id="sBlock"></span>
+      <form id="reset-form">
+        <div id="delete-ls">
+          <button class="w-btn w-btn-gra1" type="button" id="delete-username" onclick="removeLS()">초기화</button>
+        </div>
+      </form>
+      <div id="searchBox">
+        <input id="search-input-style" type="text" name="" class="query" value="" placeholder="검색할 내용 입력">
       </div>
-      <div id="weather">
-        <span id="wBlock"></span>
-        <span id="wBlock"></span>
+      <div class="search">
+        <button class="w-btn w-btn-gra2 w-btn-gra-anim" id="searchBtn">Google 검색</button>
+      </div>
+      <div class="etc_wrap">
+        <div class="btn_wrap">
+          <div class="screen">
+            <div id="music">
+              <button class="play mBtn">
+                <img src="./img/icon/play.png" alt="playMusicBtn">
+              </button>
+              <button class="stop hidden mBtn">
+                <img src="./img/icon/play-pause.png" alt="stopMusicBtn">
+              </button>
+              <audio id="audio_player" hidden loop>
+                <source src="./music/Lauv.mp3" type="audio/mp3">
+              </audio>
+            </div>
+            <div id="quote">
+              <span id="sBlock"></span>
+              <span id="sBlock"></span>
+            </div>
+            <div id="weather">
+              <span id="wBlock"></span>
+              <span id="wBlock"></span>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="hover-icon">
         <div class="icon-group">
@@ -64,7 +92,18 @@
     </div>
   </div>
 
+  <script>
+    function removeLS() {
+      var result = confirm("초기화할까요?");
+      if (result) {
+        window.localStorage.clear();
+        window.location.reload()
+      }
+    }
+  </script>
   <script src="JS/clock.js"></script>
+  <script src="JS/music.js"></script>
+  <script src="JS/search.js"></script>
   <script src="JS/username.js"></script>
   <script src="JS/todo.js"></script>
   <script src="JS/japanese.js"></script>
