@@ -335,6 +335,7 @@ input::-webkit-input-placeholder {
   margin-right: auto;
   text-align: center;
   align-items: center;
+  justify-items: center;
   width: auto;
   transform: translate(-50%, -50%);
   font-size: 20px;
